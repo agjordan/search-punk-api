@@ -12,6 +12,8 @@ function BeerEntry({ beer }) {
     return string.length < 200 ? string : string.slice(0,200) + '...'
   }
 
+  if (beer === "end of results") return(<div className={styles.entry} style={{"textAlign":"center"}}> End of results </div>)
+
   return (
     <div className={styles.entry}>
       <div className={styles.beerHeadline} onClick={toggleExpanded}>

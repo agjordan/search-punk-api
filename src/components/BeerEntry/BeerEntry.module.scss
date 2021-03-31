@@ -1,0 +1,68 @@
+.entry {
+    box-sizing: border-box;
+    padding: 5px 10px;
+    width: 100%;
+    border: 1px solid cadetblue;
+    // display: flex;
+    border-radius: 10px;
+    margin-bottom: 5px;
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .beerHeadline {
+        display: flex;
+        justify-content: space-between;
+
+        .headlineDiv {
+            padding: 7px;
+        }
+     
+        #beerName {
+            width: 25%;
+        }
+        #beerTag {
+            width: 50%;
+        }
+        #beerABV {
+            width: 10%;
+        }
+    }
+    
+    .beerBody {
+        // width: 100%;
+        // height: 100%;
+        display: flex;
+        align-items: center;
+        border-top: 1px dashed cadetblue;
+
+        img {
+            display: inline-block;
+            width: 20%;
+            max-width: 100px;
+            max-height: 200px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            margin: 5px;
+            margin-right: 45px;
+        }
+        .beerDescription {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+        }
+        .description {
+            overflow-y: scroll;
+        }
+        .descriptionDetail {
+            text-align: right;
+            #ebc {
+                float: left
+            }
+        }
+    }
+}
+

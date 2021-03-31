@@ -1,0 +1,51 @@
+.searchBar {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 5px;
+  background-color: cadetblue;
+  border-radius: 0 0 10px 10px;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .searchTextInput {
+    width: 100%;
+    height: 40px;
+    font-size: 1.3em;
+  }
+
+  .filters {
+    width: 100%;
+    
+    text-align: center;
+    min-height: 30px;
+
+    .rangeContainer {
+      width: 80%;
+      max-width: 500px;
+    }
+
+    .rangeLabel {
+      text-align: left;
+    }
+
+    .showFiltersButton {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .filterInputs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      input {
+        margin: 2px;
+        height: 30px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

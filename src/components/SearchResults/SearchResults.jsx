@@ -7,7 +7,7 @@ function SearchResults({searchResults}) {
         
         <div className={styles.searchResults}>
         <div className={styles.cardContainer}>
-            {searchResults && searchResults.map(beer => <BeerEntry beer={beer}/> )}
+            {searchResults && searchResults.map(beer => <BeerEntry key={beer.id || "endofresults"} beer={beer}/> )}
         </div>
         </div>
     )

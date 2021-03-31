@@ -10,13 +10,14 @@ export const getBeers = async ({text, ABV, IBU, EBC, perPage, page}) => {
   if (EBC.min) query_url += `&ebc_gt=${EBC.min}`;
   if (EBC.max) query_url += `&ebc_lt=${EBC.max}`;
   if (text) query_url += `&beer_name=${text}`;
-  // query_url += `&per_page=${perPage}`;
-  // query_url += `&page=${page}`;
+  query_url += `&per_page=${perPage}`;
+  query_url += `&page=${page}`;
 
   const beers = await fetch(query_url)
     .then((response) => {
         return response.json()})
     .then((data) => data);
 
+  if (beers.length < perPage) beers.push("end of results")
   return beers;
 }

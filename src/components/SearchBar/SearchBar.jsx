@@ -6,7 +6,7 @@ import "rc-slider/assets/index.css";
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const Range = createSliderWithTooltip(Slider.Range);
 
-function SearchBar({ updateSearchParams }) {
+function SearchBar({ searchParams, updateSearchParams }) {
   const [showFilters, setShowFilters] = useState(false);
 
   const toggleShowFilters = () => {
@@ -36,7 +36,7 @@ function SearchBar({ updateSearchParams }) {
                 min={0}
                 max={60}
                 step={1}
-                defaultValue={[0, 60]}
+                defaultValue={[searchParams.ABV.min, searchParams.ABV.max]}
                 allowCross={false}
                 draggableTrack={true}
                 onAfterChange={(value) => {
@@ -49,7 +49,7 @@ function SearchBar({ updateSearchParams }) {
                 min={0}
                 max={260}
                 step={10}
-                defaultValue={[0, 260]}
+                defaultValue={[searchParams.IBU.min, searchParams.IBU.max]}
                 allowCross={false}
                 onAfterChange={(value) => {
                   updateSearchParams("IBU", {min:value[0], max:value[1]});
@@ -61,7 +61,7 @@ function SearchBar({ updateSearchParams }) {
                 min={0}
                 max={80}
                 step={1}
-                defaultValue={[0, 80]}
+                defaultValue={[searchParams.EBC.min, searchParams.EBC.max]}
                 allowCross={false}
                 onAfterChange={(value) => {
                   updateSearchParams("EBC", {min:value[0], max:value[1]});

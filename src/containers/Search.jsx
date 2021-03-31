@@ -32,7 +32,7 @@ function Search() {
 
     return (
         <div >
-            <SearchBar updateSearchParams={updateSearchParams}/>
+            <SearchBar searchParams={searchParams} updateSearchParams={updateSearchParams}/>
             <SearchResults searchResults={searchResults}/>
         </ div>
     )

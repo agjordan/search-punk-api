@@ -24,8 +24,10 @@ function BeerEntry({ beer }) {
             <img src={beer.image_url} alt="" />
             <div className={styles.beerDescription}>
               <div className={styles.description}>{descriptionFormatter(beer.description)}</div>
+              <div className={styles.descriptionDetailContainer}>
               {beer.ebc && <div className={styles.descriptionDetail} id={styles.ebc}> EBC: {beer.ebc}</div>}
               {beer.ibu && <div className={styles.descriptionDetail} id={styles.ebc}> IBU: {beer.ibu}</div>}
+            </div>
             </div>
 
           </div>

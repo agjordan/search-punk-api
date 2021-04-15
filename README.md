@@ -4,9 +4,7 @@ React front-end querying and displaying results from BrewDog's [PunkAPI](https:/
 Hosted with Firebase on: [https://punkapisearch.web.app/](https://punkapisearch.web.app/)
 
 ## Motivation
-Built primarily to practice using React, particularly `useState` and passing props to children Components.
-
-Can be viewed [here](https://agjordan.github.io/javascript-calculator/).
+Built primarily to practice using React, particularly `useState`, passing props to children Components, and using an API to get data and display it.
 
 ## Screenshots
 ![Javascript Calculator](/src/assets/punkapi.png)
